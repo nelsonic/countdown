@@ -15,6 +15,6 @@
     "dev": "PORT=8000 ./node_modules/.bin/nodemon ./server.js",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js | node_modules/tap-spec/bin/cmd.js && ./node_modules/.bin/istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "test": "./node_modules/tape/bin/tape ./test/*.js",
-    "start": "npm server.js"
+    "start": "node server.js"
   }
 }
