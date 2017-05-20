@@ -8,20 +8,133 @@
     href="https://cloud.githubusercontent.com/assets/194400/25986705/f0bbbe96-36e8-11e7-9064-470f8fc30f32.png"/>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
     <script src="https://cdn.rawgit.com/mckamey/countdownjs/master/countdown.min.js"></script>
   </head>
   <body onload="" class="w-100 bg-teal-gradient">
-    <!-- <h1 id="time" class="white tc f-headline lh-solid">Hello World!</h1> -->
+
+    <div class="pa4">
+      <div class="overflow-auto">
+        <table class="center bg-black tc f1 lh-solid pt2" cellspacing="0">
+          <thead>
+            <tr class="white">
+              <th class="blank"></th>
+              <th class="">D</th>
+              <th class="">A</th>
+              <th class="">Y</th>
+              <th class="">S</th>
+              <th class="blank"></th>
+              <th class="">H</th>
+              <th class="">O</th>
+              <th class="">U</th>
+              <th class="">R</th>
+              <th class="">S</th>
+              <th class="blank"></th>
+              <th class="">M</th>
+              <th class="">I</th>
+              <th class="">N</th>
+              <th class="">S</th>
+              <th class="blank"></th>
+              <th class="">S</th>
+              <th class="">E</th>
+              <th class="">C</th>
+              <th class="blank"></th>
+            </tr>
+          </thead>
+          <tbody class="lh-copy white">
+            <tr class="">
+              <td class=" blank"></td>
+              <td class=" blank"></td>
+              <td class="" id='D1'>1</td>
+              <td class="" id='D2'>2</td>
+              <td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td>
+              <td class="" id='H1'>3</td>
+              <td class="" id='H2'>4</td>
+              <td class="blank"></td><td class="blank"></td><td class="blank"></td>
+              <td class="" id='M1'>5</td>
+              <td class="" id='M2'>6</td>
+              <td class="blank"></td><td class="blank"></td><td class="blank"></td>
+              <td class="" id='S1'>7</td>
+              <td class="" id='S2'>8</td>
+              <td class="blank"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+    <h1 id="time" class="white tc f-headline lh-solid">Hello World!</h1>
 
     <iframe src="/solari/index.html" width="100%" height="600" frameborder="0">
     <p>Sorry, Your browser does not support iframes.</p>
     </iframe>
 
+<script>
+
+function padzero(num) {
+  return (num.toString().length === 1) ? '0' + num : '' + num;
+}
+
+var DEADLINE = new Date(2017, 7, 5, 16).getTime();
+console.log(DEADLINE);
+/*---------------------*
+ | DAYS HOURS MINS SEC |
+ *---------------------*
+ |  83    12   41   12 |
+ *---------------------*
+ |123456789012345678901|
+ *---------------------*/
+function time() {
+  var NOW = new Date().getTime();
+  var DIF = Math.floor((DEADLINE - NOW) / 1000);
+  var DD  = padzero( Math.floor(DIF / (24 * 60 * 60)) );
+  // var rem = DIF - ;
+  var HH  = padzero( Math.floor( (DIF - parseInt(DD, 10) * (24 * 60 * 60)) / (60 * 60) ) );
+  var MM  = padzero( Math.floor( (DIF - DD * 24 * 60 * 60 - HH * 60 * 60 ) / 60 ) );
+  var SS  = padzero( Math.floor( (DIF - DD * 24 * 60 * 60 - HH * 60 * 60 - MM * 60) ) );
+  document.getElementById('D1').innerHTML = DD.charAt(0);
+  document.getElementById('D2').innerHTML = DD.charAt(1);
+  document.getElementById('H1').innerHTML = HH.charAt(0);
+  document.getElementById('H2').innerHTML = HH.charAt(1);
+  document.getElementById('M1').innerHTML = MM.charAt(0);
+  document.getElementById('M2').innerHTML = MM.charAt(1);
+  document.getElementById('S1').innerHTML = SS.charAt(0);
+  document.getElementById('S2').innerHTML = SS.charAt(1);
+}
+time();
+
+setInterval(function() {
+  time()
+}, 1000)
+</script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
 <style>
+@font-face { /** http://www.dafont.com/solari.font **/
+	font-family: 'Solari';
+	src: url('solari/lib/Solari.ttf');
+	src: local('Salari'), local('Riesling'), url('solari/lib/Solari.ttf');
+}
 .bg-teal-gradient { /** from: http://mrmrs.io/gradients/ **/
   background: rgba(57,204,204,1);
   background: -webkit-linear-gradient(top, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
   background: linear-gradient(to bottom, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+tr {
+    padding-top: 1em;
+}
+td {
+  min-width: 1em;
+}
+td {
+  padding: 0px 0;
+}
+table {
+  font-family: 'Solari', sans-serif;
 }
 </style>
 
