@@ -9,54 +9,34 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
   </head>
   <body onload="" class="w-100 bg-teal-gradient">
-      <div class="overflow-auto dark-gray pt2">
-        <table class="center tc f1 lh-solid pt2" cellspacing="0">
-          <thead>
-            <tr class="">
-              <th class="blank"></th>
-              <th class="">D</th>
-              <th class="">A</th>
-              <th class="">Y</th>
-              <th class="">S</th>
-              <th class="blank"></th>
-              <th class="">H</th>
-              <th class="">O</th>
-              <th class="">U</th>
-              <th class="">R</th>
-              <th class="">S</th>
-              <th class="blank"></th>
-              <th class="">M</th>
-              <th class="">I</th>
-              <th class="">N</th>
-              <th class="">S</th>
-              <th class="blank"></th>
-              <th class="">S</th>
-              <th class="">E</th>
-              <th class="">C</th>
-              <th class="">S</th>
-              <th class="blank"></th>
-            </tr>
-          </thead>
-          <tbody class="lh-copy black">
-            <tr class="">
-              <td class="blank"></td>
-              <td class="blank"></td>
-              <td class="" id='D1'>1</td>
-              <td class="" id='D2'>2</td>
-              <td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td>
-              <td class="" id='H1'>3</td>
-              <td class="" id='H2'>4</td>
-              <td class="blank"></td><td class="blank"></td><td class="blank"></td>
-              <td class="" id='M1'>5</td>
-              <td class="" id='M2'>6</td>
-              <td class="blank"></td><td class="blank"></td><td class="blank"></td>
-              <td class="" id='S1'>7</td>
-              <td class="" id='S2'>8</td>
-              <td class="blank"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="w-100 overflow-auto pt3">
+      <table class="center tc f-headline lh-solid" cellspacing="0">
+        <thead>
+          <tr class="">
+            <th class="bg-red blue pa2">D</th>
+            <th class="">D</th>
+            <th class="">H</th>
+            <th class="">H</th>
+            <th class="">M</th>
+            <th class="">M</th>
+            <th class="">S</th>
+            <th class="">S</th>
+          </tr>
+        </thead>
+        <tbody class="lh-copy black">
+          <tr class="">
+            <td class="" id='D1'>1</td>
+            <td class="" id='D2'>2</td>
+            <td class="" id='H1'>3</td>
+            <td class="" id='H2'>4</td>
+            <td class="" id='M1'>5</td>
+            <td class="" id='M2'>6</td>
+            <td class="" id='S1'>7</td>
+            <td class="" id='S2'>8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 <script>
 
 function padzero(num) {
@@ -112,13 +92,6 @@ setInterval(function() {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-td.blank {
-  min-width: 0.5em;
-}
-
-table {
   font-family: 'Solari', sans-serif;
 }
 </style>
