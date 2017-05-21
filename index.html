@@ -10,9 +10,9 @@
   </head>
   <body onload="" class="w-100 bg-teal-gradient">
     <div class="w-100 mt3 ph4">
-      <table class="center tc" cellspacing="0">
+      <table class="center tc w-100" cellspacing="0">
         <thead>
-          <tr class=" black">
+          <tr class="bg-black teal">
             <th colspan="2" class="">D</th>
             <th colspan="2" class="">H</th>
             <th colspan="2" class="">M</th>
@@ -79,10 +79,13 @@ setInterval(function() {
   background: -webkit-linear-gradient(top, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
   background: linear-gradient(to bottom, rgba(57,204,204,1) 0%, rgba(34,122,122,1) 100%);
 }
+.teal { /** from: http://mrmrs.io/gradients/ **/
+  color: rgba(57,204,204,1);
+}
 @font-face { /** http://www.dafont.com/solari.font **/
 	font-family: 'Solari';
-	src: url('solari/lib/Solari.ttf');
-	src: local('Salari'), local('Riesling'), url('solari/lib/Solari.ttf');
+	src: url('/Solari.ttf');
+	src: local('Salari'), local('Riesling'), url('/Solari.ttf');
 }
 table {
   font-family: 'Solari', sans-serif;
